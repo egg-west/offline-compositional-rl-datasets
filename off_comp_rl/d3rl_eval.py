@@ -130,6 +130,7 @@ def main():
         args.dataset_split, args.data_seed, args.holdout_elem
     )
 
+    print(f"{train_task_list=}, {test_task_list=}")
     # if args.dataset_split == "holdout":
     #     built_paths = os.path.join(
     #         args.path,
