@@ -115,6 +115,7 @@ class MTLOfflineCompoSuiteEnv(gym.Env):
         num_VecEnvs = math.ceil(len(task_list) / self.max_parallel_envs)
         self.VecEnvList = []
 
+        print("[Info] parallelizing the environments")
         j = 0
         for i in range(num_VecEnvs):
             k = 0
@@ -133,6 +134,8 @@ class MTLOfflineCompoSuiteEnv(gym.Env):
                 self.VecEnvList.append(get_composuite_env(**kwargs))
                 j += 1
                 k += 1
+        print("[Info] Environment created")
+
         self.action_space = Box(-1.0, 1.0, (8,), np.float32)
         self.observation_space = Box(-np.inf, np.inf, (93,), np.float32)
         self.observation_positions = {
@@ -148,7 +151,7 @@ class MTLOfflineCompoSuiteEnv(gym.Env):
             "obstacle_id": np.array([53, 54, 55, 56]),
             "subtask_id": np.array([57, 58, 59, 60]),
             # fmt: off
-            "robot0_proprio-state": np.array(  
+            "robot0_proprio-state": np.array(
                 [
                     61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                     71, 72, 73, 74, 75, 76, 77, 78, 79, 80,

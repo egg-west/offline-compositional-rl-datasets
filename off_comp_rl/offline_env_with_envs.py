@@ -97,7 +97,6 @@ class MTLOfflineCompoSuiteEnv(gym.Env):
         self.VecEnvList = []
 
         j = 0
-        print('trying to parallelize')
         for i in range(self.num_VecEnvs):
             env_list = []
             k = 0
@@ -119,7 +118,6 @@ class MTLOfflineCompoSuiteEnv(gym.Env):
                 j += 1
                 k += 1
             self.VecEnvList.append(DummyVecEnv(env_list))
-            print(i)
         self.action_space = self.VecEnvList[0].action_space
         self.observation_space = self.VecEnvList[0].observation_space
         self.observation_positions = self.VecEnvList[0].envs[0].observation_positions
