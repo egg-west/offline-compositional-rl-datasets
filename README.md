@@ -14,6 +14,8 @@ pip install -e .
 pip uninstall numba
 pip install -U numba
 
+
+
 python off_comp_rl/d3rl_runner.py --algo bc --dataset-type medium-replay-subsampled
 python off_comp_rl/d3rl_runner.py --algo bc --dataset-type expert
 

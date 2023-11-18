@@ -271,7 +271,6 @@ class CompositionalMlp(nn.Module):
             x = torch.cat(x_post, dim=-1)
         return x
 
-
 class _CompositionalEncoder(_VectorEncoder):  # type: ignore
     """_CompositionalEncoder class for d3rlpy."""
 
@@ -328,7 +327,6 @@ class _CompositionalEncoder(_VectorEncoder):  # type: ignore
     @property
     def last_layer(self) -> nn.Linear:
         raise NotImplementedError("CompositionalEncoder does not have last_layer")
-
 
 class CompositionalEncoder(_CompositionalEncoder, Encoder):
     """Implements the actual Compositional Encoder."""
