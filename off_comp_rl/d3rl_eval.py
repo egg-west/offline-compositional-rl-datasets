@@ -164,7 +164,9 @@ def main():
         #     f.write("\n")
 
         env = MTLOfflineCompoSuiteEnv(
-            task_list=tl, **({"offline_kwargs": offline_kwargs})
+            max_parallel_envs=1,
+            task_list=tl,
+            **({"offline_kwargs": offline_kwargs})
         )
         avg_cum_reward, avg_success = rollout_envs(env, model, save_path=save_path)
         rewards.append(avg_cum_reward)
