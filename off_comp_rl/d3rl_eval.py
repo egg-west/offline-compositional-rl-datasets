@@ -47,12 +47,12 @@ def rollout_envs(env, model: nn.Module, num_steps: int, num_trajs: int, save_pat
                 all_successes[i, :], np.squeeze(reward == 1.0, axis=1)
             )
 
-            # Save the rewards per env
-            with open(save_path, "a") as f:
-                f.write(f"{i},{s}")
-                for r in reward:
-                    f.write(f",{r[0]}")
-                f.write("\n")
+            # # Save the rewards per env
+            # with open(save_path, "a") as f:
+            #     f.write(f"{i},{s}")
+            #     for r in reward:
+            #         f.write(f",{r[0]}")
+            #     f.write("\n")
 
             curr_rewards.append(reward)
         all_rewards.append(curr_rewards)
