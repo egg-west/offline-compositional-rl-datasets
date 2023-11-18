@@ -12,7 +12,7 @@ from torch import from_numpy, no_grad
 from offline_env_with_envs import MTLOfflineCompoSuiteEnv
 from utils import load_model, load_compositional_model
 
-TASK_LIST_PATH = "train_test_split"
+TASK_LIST_PATH = "train_test_splits"
 
 
 def rollout_envs(env, model: nn.Module, num_steps: int, num_trajs: int, save_path: str):
