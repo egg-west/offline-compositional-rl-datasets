@@ -265,7 +265,7 @@ def main(
     }
 
     #train_algo(experiment_name, dataset, env, algo, train_kwargs, encoder, n_steps)
-    train_algo(experiment_name, dataset, algo, train_kwargs, encoder, n_steps)
+    train_algo(experiment_name, dataset, algo, encoder, n_steps, train_kwargs,)
 
 
 if __name__ == "__main__":
