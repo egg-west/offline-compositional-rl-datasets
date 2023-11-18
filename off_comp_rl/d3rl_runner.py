@@ -297,7 +297,7 @@ if __name__ == "__main__":
 
     else:
         train_task_list = [[args.robot, args.object, args.obstacle, args.objective]]
-        experiment_name = f"{args.robot}_{args.object}_{args.obstacle}_{args.objective}_{args.hparam_id}"
+        experiment_name = f"{args.robot}_{args.object}_{args.obstacle}_{args.objective}"#_{args.hparam_id}"
         expert_task_list = None
 
     main(

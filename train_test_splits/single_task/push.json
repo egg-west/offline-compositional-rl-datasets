@@ -1,0 +1,18 @@
+{
+    "train": [
+        [
+            "IIWA",
+            "Plate",
+            "ObjectWall",
+            "Push"
+        ]
+    ],
+    "test": [
+        [
+            "IIWA",
+            "Plate",
+            "ObjectWall",
+            "Push"
+        ]
+    ]
+}

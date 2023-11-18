@@ -1,3 +1,20 @@
+# Installation
+```
+pip install d3rlpy==1.1.1
+
+vim /anaconda/envs/dql/lib/python3.8/site-packages/pybullet_envs/__init__.py
+change to:
+  if id not in gym.envs.registry
+
+git clone https://github.com/Lifelong-ML/CompoSuite.git
+cd CompoSuite
+pip install -r requirements_default.txt
+pip install -e .
+
+pip uninstall numba
+pip install -U numba
+```
+
 # Robotic Manipulation Datasets for Offline Compositional Reinforcement Learning
 
 This is the repository for our Robotic Manipulation Offline Compositional Reinforcement Learning Datasets and the corresponding code.
@@ -44,7 +61,7 @@ The following arguments can be used to execute specific training configurations.
     --use-task-list-path: If this is not set, only a single task according to the robot, object, obstacle and objective args will be run
     --algo: The offline algorithm to use. Options are "bc" and "iql".
     --encoder: The policy encoder to use. Options are "default" or "compositional". "compositional" is currently only supported for algo="iql".
-    
+
 Once you have trained the model, you can evaluate it using
 
 ```python
