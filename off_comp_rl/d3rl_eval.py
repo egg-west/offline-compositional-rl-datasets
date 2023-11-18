@@ -130,15 +130,15 @@ def main():
         args.dataset_split, args.data_seed, args.holdout_elem
     )
 
-    if args.dataset_split == "holdout":
-        built_paths = os.path.join(
-            args.path,
-            f"{args.dataset_type}_{args.holdout_elem}_{args.dataset_split}_{args.data_seed}_*",
-        )
-    else:
-        built_paths = os.path.join(
-            args.path, f"{args.dataset_type}_{args.dataset_split}_{args.data_seed}_*"
-        )
+    # if args.dataset_split == "holdout":
+    #     built_paths = os.path.join(
+    #         args.path,
+    #         f"{args.dataset_type}_{args.holdout_elem}_{args.dataset_split}_{args.data_seed}_*",
+    #     )
+    # else:
+    #     built_paths = os.path.join(
+    #         args.path, f"{args.dataset_type}_{args.dataset_split}_{args.data_seed}_*"
+    #     )
     #built_path = glob(built_paths)[0]
 
     if args.encoder == "mlp":

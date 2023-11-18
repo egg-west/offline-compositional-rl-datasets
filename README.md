@@ -22,7 +22,7 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --e
 
 [info     ] Model parameters are saved to d3rlpy_default_bc_logs/IIWA_Box_None_Push_20231118035354/model_300000.pt
 
-python off_comp_rl/d3rl_eval.py --algo bc --dataset-type medium-replay-subsampled --path d3rlpy_default_bc_logs/IIWA_Box_None_Push_20231118035354/model_300000.pt
+python off_comp_rl/d3rl_eval.py --algo bc --dataset-type medium-replay-subsampled --model_path d3rlpy_default_bc_logs/IIWA_Box_None_Push_20231118035354/
 
 ```
 
