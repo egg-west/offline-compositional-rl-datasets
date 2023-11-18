@@ -13,6 +13,8 @@ pip install -e .
 
 pip uninstall numba
 pip install -U numba
+
+python d3rl_runner.py --algo bc --dataset-type medium-replay-subsampled
 ```
 
 # Robotic Manipulation Datasets for Offline Compositional Reinforcement Learning

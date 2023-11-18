@@ -10,7 +10,7 @@ import d3rlpy
 
 from offline_env import MTLOfflineCompoSuiteEnv
 
-DATASET_PATH = "_TO_SET_"
+DATASET_PATH = "dataset_IIWA"
 TASK_LIST_PATH = "_TO_SET_"
 
 import os
@@ -264,7 +264,8 @@ def main(
         "graph_structure": graph_structure,
     }
 
-    train_algo(experiment_name, dataset, env, algo, train_kwargs, encoder, n_steps)
+    #train_algo(experiment_name, dataset, env, algo, train_kwargs, encoder, n_steps)
+    train_algo(experiment_name, dataset, algo, train_kwargs, encoder, n_steps)
 
 
 if __name__ == "__main__":
