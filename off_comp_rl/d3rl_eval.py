@@ -176,8 +176,8 @@ def main():
         del env
         gc.collect()
 
-    print("Train reward", rewards[0])
-    print("Test reward", rewards[1])
+    print("Train return", rewards[0])
+    print("Test return", rewards[1])
 
     print("Train success", successes[0])
     print("Test success", successes[1])

@@ -14,8 +14,8 @@ pip install -e .
 pip uninstall numba
 pip install -U numba
 
-python off_comp_rl/d3rl_runner.py --algo bc --dataset-type medium-replay-subsampled --dataset-split single_task
-
+python off_comp_rl/d3rl_runner.py --algo bc --dataset-type medium-replay-subsampled
+python off_comp_rl/d3rl_runner.py --algo bc --dataset-type expert
 
 # use pip install instead of conda, for the case of not compatible pytorch version for your machine
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113

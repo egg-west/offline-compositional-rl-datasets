@@ -2,16 +2,16 @@
     "train": [
         [
             "IIWA",
-            "Plate",
-            "ObjectWall",
+            "Box",
+            "None",
             "Push"
         ]
     ],
     "test": [
         [
             "IIWA",
-            "Plate",
-            "ObjectWall",
+            "Box",
+            "None",
             "Push"
         ]
     ]
