@@ -169,7 +169,7 @@ def main():
             task_list=tl,
             **({"offline_kwargs": offline_kwargs})
         )
-        avg_cum_reward, avg_success = rollout_envs(env, model, save_path=save_path)
+        avg_cum_reward, avg_success = rollout_envs(env, model, save_path=None)
         rewards.append(avg_cum_reward)
         successes.append(avg_success)
 
