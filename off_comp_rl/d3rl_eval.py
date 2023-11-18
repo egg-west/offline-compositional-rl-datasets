@@ -12,7 +12,7 @@ from torch import from_numpy, no_grad
 from offline_env_with_envs import MTLOfflineCompoSuiteEnv
 from utils import load_model, load_compositional_model
 
-TASK_LIST_PATH = "_TO_SET_"
+TASK_LIST_PATH = "train_test_split"
 
 
 def rollout_envs(env, model: nn.Module, num_steps: int, num_trajs: int, save_path: str):
@@ -97,7 +97,7 @@ def parse_args():
         "--dataset-split",
         type=str,
         default="default",
-        choices=["default", "compositional", "holdout"],
+        choices=["default", "compositional", "holdout", "customized", "single_task"],
     )
     parser.add_argument(
         "--dataset-type",
