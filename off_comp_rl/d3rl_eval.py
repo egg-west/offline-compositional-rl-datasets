@@ -92,7 +92,7 @@ def load_tasklist(dataset_split: str, data_seed: int, holdout_elem: str = None):
 def parse_args():
     """Parse the command line arguments."""
     parser = ArgumentParser()
-    parser.add_argument("--path", type=str, required=True)
+    parser.add_argument("--model_path", type=str, required=True)
     parser.add_argument(
         "--dataset-split",
         type=str,
@@ -139,12 +139,12 @@ def main():
         built_paths = os.path.join(
             args.path, f"{args.dataset_type}_{args.dataset_split}_{args.data_seed}_*"
         )
-    built_path = glob(built_paths)[0]
+    #built_path = glob(built_paths)[0]
 
     if args.encoder == "mlp":
-        model = load_model(built_path, number=args.model_nr, algo=args.algo)
+        model = load_model(args.model_path, number=args.model_nr, algo=args.algo)
     elif args.encoder == "compositional":
-        model = load_compositional_model(built_path, number=args.model_nr)
+        model = load_compositional_model(args.model_path, number=args.model_nr)
     else:
         raise NotImplementedError("No such encoder.")
 
@@ -155,13 +155,13 @@ def main():
     for name, tl in zip(["train", "test"], [train_task_list, test_task_list]):
         # create a file for each task list to save results in
         # where the headline contains the step and a column for each task
-        save_path = os.path.join(built_path, f"results_{name}_perstep.csv")
-        with open(save_path, "w") as f:
-            f.write("traj,step")
-            for task in tl:
-                task_string = f"{task[0]}_{task[1]}_{task[2]}_{task[3]}"
-                f.write(f",{task_string}")
-            f.write("\n")
+        #save_path = os.path.join(built_path, f"results_{name}_perstep.csv")
+        # with open(save_path, "w") as f:
+        #     f.write("traj,step")
+        #     for task in tl:
+        #         task_string = f"{task[0]}_{task[1]}_{task[2]}_{task[3]}"
+        #         f.write(f",{task_string}")
+        #     f.write("\n")
 
         env = MTLOfflineCompoSuiteEnv(
             task_list=tl, **({"offline_kwargs": offline_kwargs})
